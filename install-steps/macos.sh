@@ -1,5 +1,5 @@
 # Disable guest account
-sudo bash install-steps/guest_account.sh disable
+# sudo bash install-steps/guest_account.sh disable
 
 # Use F1-F12 as standard function keys
 defaults write -globalDomain com.apple.keyboard.fnState -int 1
@@ -8,20 +8,20 @@ defaults write -globalDomain com.apple.keyboard.fnState -int 1
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
 # Auto hide and show Dock
-defaults write com.apple.dock autohide -bool true
+# defaults write com.apple.dock autohide -bool true
 
-# Hide some app icons in Dock and make dock lays left
+# Hide some app icons in Dock and make dock lays right
 defaults write com.apple.dock persistent-apps -array
-defaults write com.apple.dock orientation -string left
+defaults write com.apple.dock orientation -string right
 
 # Show battery percentage
 defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 
 # Disable menu bar transparency
-defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
+# defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
 
 # Optimize window resize speed
-defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
+# defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 
 # Always show filename extension
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
@@ -32,10 +32,10 @@ defaults write com.apple.frameworks.diskimages skip-verify-locked -bool true
 defaults write com.apple.frameworks.diskimages skip-verify-remote -bool true
 
 # Config Finder
-defaults write com.apple.finder CreateDesktop false
+# defaults write com.apple.finder CreateDesktop false
 defaults write com.apple.finder QLEnableTextSelection -boolean true;
-defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -boolean false;
-defaults write com.apple.finder ShowRemovableMediaOnDesktop -boolean false;
+# defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -boolean false;
+# defaults write com.apple.finder ShowRemovableMediaOnDesktop -boolean false;
 defaults write com.apple.finder FXEnableExtensionChangeWarning -boolean false;
 
 # Enable clickpad Tap to click
@@ -54,7 +54,7 @@ chflags nohidden ~/Library
 cp config/com.apple.Siri.plist ~/Library/Preferences/
 
 # Hide input source Icon in menu bar
-cp config/com.apple.systemuiserver.plist ~/Library/Preferences/
+# cp config/com.apple.systemuiserver.plist ~/Library/Preferences/
 
 # Remove airplay icon in menubar
 defaults write com.apple.airplay showInMenuBarIfPresent -bool false

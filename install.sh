@@ -1,6 +1,7 @@
 #!/bin/sh
 source basic.sh
 
+# [shadowsocks/shadowsocks-libev: libev port of shadowsocks](https://github.com/shadowsocks/shadowsocks-libev)
 if [[ ! -e /usr/local/bin/sslocal ]]; then
     brew install shadowsocks-libev
     brew services start shadowsocks-libev
@@ -62,6 +63,7 @@ else
     echo "You have installed vscode"
 fi
 
+# gnu-sed
 if brew ls --versions gnu-sed > /dev/null; then
     echo "You have installed gsed"
 else
@@ -78,7 +80,7 @@ fi
 # install coreutils
 if [[ ! -e /usr/local/opt/coreutils ]]; then
     brew install coreutils
-    cp /usr/local/opt/coreutils/libexec/gnubin/gls /usr/local/opt/coreutils/libexec/gnubin/ls
+    # cp /usr/local/opt/coreutils/libexec/gnubin/gls /usr/local/opt/coreutils/libexec/gnubin/ls
 else
     echo "You have installed coreutils"
 fi
@@ -91,7 +93,7 @@ else
 fi
 
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags
-brew install redis
+# brew install redis
 brew_install python3
 brew_install cmake
 brew_install gawk
@@ -108,7 +110,7 @@ brew_install scmpuff
 brew_install fzf
 brew_install fd
 brew_install the_silver_searcher
-brew_install nvim
+# brew_install nvim
 brew_install exiftool
 brew_install archey
 brew_install ranger
@@ -133,12 +135,12 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 ln -s ~/.macbootstrap/zsh-config/.zshrc ~/.zshrc
 
 # vim configuration
-backup_file ~/.vim
-backup_file ~/.config/nvim/
-git clone https://github.com/bestswifter/vim-config.git ~/.config/nvim
-ln -s ~/.config/nvim ~/.vim
-backup_file ~/.ideavimrc
-ln -s ~/.config/ideavimrc ~/.ideavimrc
+# backup_file ~/.vim
+# backup_file ~/.config/nvim/
+# git clone https://github.com/bestswifter/vim-config.git ~/.config/nvim
+# ln -s ~/.config/nvim ~/.vim
+# backup_file ~/.ideavimrc
+# ln -s ~/.config/ideavimrc ~/.ideavimrc
 
 # ESLint configuration
 backup_file ~/.eslintrc.js
@@ -161,7 +163,7 @@ ln -s ~/.macbootstrap/config/ranger/rc.conf "$old_rc_conf"
 unset ALL_PROXY
 ./install-steps/dependencies.after.sh
 sudo ./install-steps/macos.sh
-./install-steps/sogou_sync.sh
+# ./install-steps/sogou_sync.sh
 
 # ssh configuration
 backup_file ~/.ssh/config

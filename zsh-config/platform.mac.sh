@@ -194,6 +194,7 @@ function bsfn () {
     find . \( -type f -or -type l \) | egrep --color=always $1
 }
 
+# TODO
 function bssclient () {
     nohup sslocal -c ~/.macbootstrap/config/shadowsocks.conf &> $BSTEMP/nohup.out&
 }
